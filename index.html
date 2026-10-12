@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A step-by-step trading course for complete beginners: how markets work, risk, charting, practice on demo, journaling and planning a funded-trader challenge.">
+<meta name="theme-color" content="#1f5fbf">
+<meta property="og:title" content="From your first chart to a funded account">
+<meta property="og:description" content="The Complete Trading Masterclass: a guided course with calculators, a checklist, a trade journal and a challenge planner.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%88%3C/text%3E%3C/svg%3E">
+<title>The Complete Trading Masterclass</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f5;--panel:#fff;--ink:#14202b;--mute:#58697a;--line:#cfd9e2;--acc:#1f5fbf;--accbg:#e1ecfb;--loss:#c2362b;--gain:#2e7d5b;--warn:#fff4d6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101820;--panel:#18232e;--ink:#e6edf3;--mute:#93a4b4;--line:#2b3b4a;--acc:#6aa3f2;--accbg:#1c2f47;--loss:#ff7b6e;--gain:#5fcf9f;--warn:#3a3217}}
+:root[data-theme="dark"]{--bg:#101820;--panel:#18232e;--ink:#e6edf3;--mute:#93a4b4;--line:#2b3b4a;--acc:#6aa3f2;--accbg:#1c2f47;--loss:#ff7b6e;--gain:#5fcf9f;--warn:#3a3217}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));height:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 Newsreader,Georgia,serif;overflow-x:hidden}
+h1,h2,h3,.ui,button,label,th,nav a{font-family:Archivo,system-ui,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--panel);border-bottom:1px solid var(--line);display:flex;gap:4px;align-items:center;padding:8px 12px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--mute);text-decoration:none;font-size:14px;font-weight:500;padding:6px 10px;border-radius:6px}
+nav a:hover,nav a:focus-visible{background:var(--accbg);color:var(--acc);outline:none}
+nav b{font-family:Archivo;font-weight:800;margin-right:8px}
+nav button{margin-left:auto}
+.hero{max-width:900px;margin:0 auto;padding:56px 20px 24px}
+.hero h1{font-size:clamp(34px,7vw,64px);line-height:1.02;margin:0 0 16px;font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:62ch;color:var(--mute);margin:0 0 12px}
+.six{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin-top:24px}
+.six div{border-left:3px solid var(--acc);padding:4px 12px;background:var(--panel)}
+.six b{font-family:Archivo;display:block}
+main{max-width:900px;margin:0 auto;padding:0 20px 80px}
+section{padding-top:44px}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 6px;font-weight:800;letter-spacing:-.01em}
+h3{font-size:19px;margin:22px 0 6px}
+.lead{color:var(--mute);margin:0 0 14px}
+.card,details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:10px 0}
+details>summary{cursor:pointer;font-family:Archivo;font-weight:700;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary:before{content:"+";display:inline-block;width:1.2em;color:var(--acc)}
+details[open]>summary:before{content:"–"}
+details>div{margin-top:8px}
+ul{padding-left:20px;margin:6px 0}li{margin:3px 0}
+.note{background:var(--warn);border-radius:6px;padding:10px 14px;font-size:16px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:8px 0}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--mute)}
+.tw{overflow-x:auto}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.85em;background:var(--accbg);padding:1px 5px;border-radius:4px}
+a{color:var(--acc)}
+button,.btn{font-size:14px;font-weight:700;border:1px solid var(--acc);background:var(--acc);color:#fff;padding:8px 14px;border-radius:6px;cursor:pointer}
+button.ghost{background:transparent;color:var(--acc)}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+label{display:block;font-size:13px;font-weight:500;color:var(--mute)}
+input,select{width:100%;font:16px Archivo,sans-serif;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);margin-top:3px}
+.out{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:12px}
+.out div{background:var(--accbg);border-radius:6px;padding:8px 12px;font-family:Archivo;font-size:13px;color:var(--mute)}
+.out strong{display:block;font-size:20px;color:var(--ink)}
+.pos{color:var(--gain)!important}.neg{color:var(--loss)!important}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.chk label{display:flex;gap:10px;align-items:flex-start;font-size:17px;font-family:Newsreader,serif;color:var(--ink);padding:5px 0;cursor:pointer}
+.chk input{width:20px;height:20px;margin:4px 0 0;flex:none}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:8px 0}
+.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .2s}
+.wk{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.wk .card{margin:0}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--panel);border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center;padding:8px 14px}
+.brand{font-size:16px}.small{font-size:13px;color:var(--mute);margin-left:auto}
+.app{display:grid;grid-template-columns:270px minmax(0,1fr)}
+aside{position:sticky;top:calc(52px + env(safe-area-inset-top,0px));height:calc(100vh - 52px);overflow-y:auto;background:var(--panel);border-right:1px solid var(--line);padding:12px 10px 40px}
+aside h4{font:700 13px Archivo,sans-serif;color:var(--mute);margin:16px 8px 4px}
+aside button{display:flex;width:100%;gap:8px;align-items:center;text-align:left;background:transparent;color:var(--ink);border:0;font-weight:500;padding:8px;border-radius:6px}
+aside button:hover{background:var(--accbg)}aside button.on{background:var(--accbg);color:var(--acc);font-weight:700}
+aside .ck{width:18px;height:18px;border:1.5px solid var(--line);border-radius:50%;flex:none;font-size:11px;display:grid;place-items:center}
+aside .ck.d{background:var(--gain);border-color:var(--gain);color:#fff}
+.content section{padding-top:4px}.content .hero{padding-top:36px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font:500 13px Archivo,sans-serif;color:var(--mute);margin-bottom:6px}
+.chip{border:1px solid var(--line);border-radius:99px;padding:1px 10px}
+.Beginner{color:var(--gain)}.Intermediate{color:var(--acc)}.Advanced{color:var(--loss)}
+.goal{border-left:3px solid var(--acc);background:var(--accbg);padding:8px 14px;border-radius:0 6px 6px 0;margin:8px 0 16px;font-size:17px}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:36px;padding-top:16px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.gt{padding:8px 0;border-bottom:1px solid var(--line)}.gt b{font-family:Archivo}
+#menu{display:none}
+@media(max-width:860px){.app{display:block}#menu{display:block}aside{position:fixed;z-index:7;top:calc(52px + env(safe-area-inset-top,0px));left:0;width:min(300px,86vw);transform:translateX(-102%);transition:transform .2s}aside.open{transform:none;box-shadow:0 0 30px rgba(0,0,0,.3)}}
+
+.lv{display:grid;grid-template-columns:40px 1fr;gap:12px;position:relative}
+.lv:not(:last-child):before{content:"";position:absolute;left:19px;top:40px;bottom:-12px;width:2px;background:var(--line)}
+.lv .dot{width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font:800 17px Archivo,sans-serif;z-index:1}
+.lv .card{margin:0 0 12px;border-left:4px solid var(--c)}
+aside h4 span{float:right;font-weight:500}
+.hero h1{max-width:14ch}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{nav,button{display:none}}
+</style></head><body>
+<div class="top"><button class="ghost" id="menu" aria-label="Open course menu">Menu</button><b class="ui brand">Trading Masterclass</b><span class="ui small" id="tp"></span><button class="ghost" id="theme" aria-label="Toggle theme">Theme</button></div>
+
+<div class="app"><aside id="side" aria-label="Course menu"></aside><div class="content"><header class="hero">
+<h1>From your first chart to a funded account</h1>
+<p>The Complete Trading Masterclass: a step-by-step course for complete beginners. Learn how markets work, practise safely on demo, prove your edge with data, then plan and pass a funded-trader challenge.</p>
+<p>The goal is not to collect indicators. It is to answer six questions before every trade:</p>
+<div class="six">
+<div><b>What should I trade?</b>Find markets worth researching.</div>
+<div><b>Why should I trade it?</b>Environment, catalysts, structure, evidence.</div>
+<div><b>Where should I enter?</b>An objective setup and confirmation.</div>
+<div><b>How much should I risk?</b>Size, stop, reward and costs.</div>
+<div><b>When do I exit or stay out?</b>Predefined management rules.</div>
+<div><b>Does it actually work?</b>Backtest and journal before raising risk.</div></div>
+<div class="note">Markets covered: crypto spot, crypto futures and perpetuals, forex, synthetic indices (including volatility indices) and stock indices and futures. Crypto is the primary learning environment. No strategy or tool guarantees profit; the aim is a process you can test, improve and run with discipline.</div>
+</header>
+
+<main>
+<section id="start"><h2>Start here</h2><p class="lead">Follow the path in order if you are new. If you already trade, jump to the parts that upgrade your process.</p>
+<div class="grid2"><div class="card"><h3 style="margin-top:0">I'm new to trading</h3><p>A guided path from zero to a funded-trader challenge: 19 short modules (about 2.5 hours of reading) plus the practice that matters more. Each module ends with a button to the next one.</p><button data-go="basics">Begin Module 1</button></div>
+<div class="card"><h3 style="margin-top:0">I already trade</h3><p>Go straight to what you need:</p><p><a href="#scan">Scanner</a> · <a href="#concepts">Setups</a> · <a href="#markets">Markets</a> · <a href="#quant">Testing</a> · <a href="#bot">AI bot</a></p></div></div>
+<div class="card" id="prog"></div><h3>The journey</h3><div id="jmap"></div>
+<h3>Quick tools</h3><div class="tabs"><button class="ghost" data-go="lab">Position calculator</button><button class="ghost" data-go="check">Pre-trade checklist</button><button class="ghost" data-go="journal">Trade journal</button><button class="ghost" data-go="funded">Challenge planner</button><button class="ghost" data-go="gloss">Glossary</button></div>
+<h3>Five rules to remember</h3><ol><li>Never enter without a stop-loss and a position size set from your risk budget.</li><li>Trade one written setup until you have enough results to judge it.</li><li>Check the exact pair, spread and depth before every trade.</li><li>Record every trade, including setups you skipped.</li><li>Stay on demo until your journal shows positive expectancy after costs.</li></ol></section>
+<section id="gloss"><h2>Glossary</h2><p class="lead">Plain-language definitions for every term in the course.</p><label>Search terms<input id="gs" type="search" placeholder="Try: stop, funding, RSI"></label><div id="gl"></div></section>
+<section id="stack"><h2>Part 1: Your tool stack</h2><p class="lead">Each tool answers one question. Start with reliable data, a charting platform, an execution venue and a journal.</p>
+<div class="tw"><table><tr><th>Tool</th><th>Role</th><th>Primary question</th></tr>
+<tr><td><a href="https://coinmarketcap.com" target="_blank" rel="noopener">CoinMarketCap</a></td><td>Crypto discovery and research</td><td>Which assets deserve analysis?</td></tr>
+<tr><td><a href="https://www.tradingview.com" target="_blank" rel="noopener">TradingView</a></td><td>Charting and technical analysis</td><td>Is there a valid setup, and where is it invalidated?</td></tr>
+<tr><td><a href="https://www.coinglass.com" target="_blank" rel="noopener">CoinGlass</a></td><td>Derivatives: OI, funding, liquidations</td><td>What does positioning add?</td></tr>
+<tr><td><a href="https://defillama.com" target="_blank" rel="noopener">DefiLlama</a></td><td>TVL, stablecoins, fees, chain activity</td><td>Is there real activity behind the asset?</td></tr>
+<tr><td><a href="https://cryptopanic.com" target="_blank" rel="noopener">CryptoPanic</a></td><td>Crypto news monitoring</td><td>Is there a catalyst that changes risk?</td></tr>
+<tr><td><a href="https://www.investing.com/economic-calendar/" target="_blank" rel="noopener">Investing.com calendar</a></td><td>Scheduled macro events</td><td>Could a release disrupt my setup?</td></tr>
+<tr><td><a href="https://www.cmegroup.com" target="_blank" rel="noopener">CME Group</a></td><td>Futures contract specs</td><td>What does a price move cost on this contract?</td></tr></table></div>
+<h3>Supporting sources</h3>
+<ul><li>Exchange API and order book: tradable prices, spreads, depth, execution.</li><li>Official project docs and token unlock calendars: tokenomics, vesting, supply changes.</li><li>Broker specifications: pip values, spreads, swaps, margin.</li><li>Journal and spreadsheet: records, expectancy, drawdown.</li><li>Python: historical testing, screening, later automation.</li></ul>
+<div class="note"><b>Keep the roles clear.</b> CoinMarketCap discovers. TradingView analyses. CoinGlass interprets derivatives. Primary sources verify. Your exchange determines execution and costs. Your journal determines whether you have an edge.</div></section>
+
+<section id="cmc"><h2>Part 2: CoinMarketCap guide</h2><p class="lead">Use it as a funnel: broad market, then shortlist, then the actual pair and chart. It is a research starting point, not a signal generator.</p>
+<details open><summary>2.1 Understand the overall market</summary><div>Review total market cap, total volume and its change, BTC and ETH performance, Bitcoin dominance, sector performance, and whether gains are broad or concentrated. Label the environment bullish, bearish, ranging, mixed or event-driven, and record the evidence. BTC and ETH rising while most altcoins fall points to a market concentrated in large assets, not a broad altcoin rally.</div></details>
+<details><summary>2.2 Screen with rankings</summary><div>Keep separate groups: large liquid assets for consistent practice, mid-caps with adequate activity, sector assets you understand, and a higher-risk list for small or newly listed coins. Start with a manageable liquid list.
+<div class="tw"><table><tr><th>Illustrative</th><th>Token A</th><th>Token B</th><th>Token C</th></tr><tr><td>Market cap</td><td>$2B</td><td>$400M</td><td>$60M</td></tr><tr><td>24h volume</td><td>$120M</td><td>$70M</td><td>$5M</td></tr><tr><td>Volume / cap</td><td>6%</td><td>17.5%</td><td>8.3%</td></tr><tr><td>Decision</td><td>Research</td><td>Research</td><td>Extra caution</td></tr></table></div>
+A high volume-to-cap ratio does not prove good liquidity. Check venue, spread, depth and the quality of reported volume.</div></details>
+<details><summary>2.3 Read price change and volume together</summary><div>A 20% gain may be a breakout, a news reaction or the end of a speculative move. A 2% gain may be a base forming or an inactive market. Compare equal time windows, volume against its own baseline, performance against BTC, distance to support and resistance, and the real chart structure. A potential runner needs several independent conditions: relative strength, rising activity, clear structure, room to the next level, acceptable liquidity and no rule-breaking event risk.</div></details>
+<details><summary>2.4 Market cap, supply and FDV</summary><div><ul><li><b>Circulating supply:</b> tokens reported as circulating.</li><li><b>Market cap:</b> price × circulating supply.</li><li><b>FDV:</b> price × fully diluted supply estimate.</li></ul>
+Example: $2 price, 100M circulating, 1B maximum. Market cap = $200M, FDV = $2B, ten times larger. That does not prove overvaluation; it tells you to investigate unlocks, emissions, recipients and whether demand can absorb new supply. For short-term trades, unlocks matter if they fall inside your holding period.</div></details>
+<details><summary>2.5 Volume is not liquidity</summary><div>Open the token's listed markets, pick the exact exchange and pair, check the live spread and depth near entry and exit, estimate slippage at your size, and verify minimum order rules. Never assume combined market volume is available on your venue.</div></details>
+<details><summary>2.6 Sectors and categories</summary><div>Use categories (AI, DeFi, infrastructure, gaming) to find themes. If several AI tokens outperform BTC with rising relative volume and one has a clean 4H breakout structure, that one deserves investigation. Sector momentum does not make every token a buy; check each individually.</div></details>
+<details><summary>2.7 Structured watchlists</summary><div><div class="tw"><table><tr><th>List</th><th>Purpose</th></tr><tr><td>Market benchmarks</td><td>BTC, ETH</td></tr><tr><td>Liquid core</td><td>Repeatable analysis</td></tr><tr><td>Relative-strength candidates</td><td>Outperforming benchmarks</td></tr><tr><td>Sector rotation</td><td>Grouped by theme</td></tr><tr><td>Event risk</td><td>Upcoming unlocks, announcements</td></tr><tr><td>Active setups</td><td>Approaching a predefined trigger</td></tr></table></div></div></details>
+<details><summary>2.8 Detect extended coins</summary><div>Ask: has price broken a defined base and held the breakout level? How far is it from its 20 EMA or VWAP? How much room to the next resistance? Is the move large relative to ATR? Is there a pullback entry with a sensible stop? Chasing a strong asset can leave too little reward for the risk.</div></details>
+<details><summary>2.9 Verify asset and pair</summary><div>CoinMarketCap is not your execution venue; prices differ by venue, pair and timing. Verify the token and contract address, confirm the exact pair, use that venue's data for entries, stops and sizing, and journal the exchange, pair and timestamp. Critical for new tokens, wrapped assets and similar names.</div></details>
+<details><summary>2.10 Build a scanner with the API</summary><div>The CoinMarketCap API offers market data and metadata subject to plan and rate limits: ID, symbol, price, percent changes, market cap, supply, volume, category and timestamp. Combine it with exchange candles to compute your own relative strength, volume expansion, ATR and technical conditions. The output is a ranked research list with evidence, not a pump prediction.</div></details></section>
+
+<section id="scan"><h2>Part 3: Crypto scanning system</h2>
+<details open><summary>3.1 Market dashboard</summary><div><div class="tw"><table><tr><th>Variable</th><th>Investigate</th></tr><tr><td>BTC structure</td><td>Bullish, bearish, ranging, mixed</td></tr><tr><td>ETH structure</td><td>Confirming or diverging from BTC</td></tr><tr><td>Breadth</td><td>Gains spread across many assets?</td></tr><tr><td>BTC dominance, ETH/BTC</td><td>Is share or relative strength shifting?</td></tr><tr><td>Volatility</td><td>Ranges expanding or contracting</td></tr><tr><td>Derivatives</td><td>Unusual funding or OI changes</td></tr><tr><td>Events</td><td>Announcements, economic releases</td></tr></table></div>
+End with a conclusion: bullish (prioritise valid longs), bearish (valid shorts where permitted), ranging (tested range strategies), mixed (fewer trades or wait), event-driven (account for disruption). These are preferences, not commands.</div></details>
+<details><summary>3.2 Potential Runner Score (interactive)</summary><div>Ten points across five factors. The weights are hypotheses to test, not a validated formula. Candidates at 7 or more get manual chart review. Reject unacceptable liquidity or risk regardless of score.
+<div class="grid" id="runner"></div><div class="out"><div>Score<strong id="rs">0 / 10</strong></div><div>Verdict<strong id="rv">Reject</strong></div></div></div></details>
+<details><summary>3.3 Relative strength</summary><div><code>R = (P_end − P_start) / P_start × 100%</code> over exactly the same interval. BTC $100,000 → $103,000 is +3%; Coin A $10 → $10.80 is +8%; excess return is about 5 percentage points. A rising Coin/BTC ratio means outperformance. It identifies candidates, not entries; an asset can outperform BTC and still be in a downtrend.</div></details>
+<details><summary>3.4 Open interest, funding and liquidations</summary><div><ul><li><b>Open interest:</b> outstanding derivatives exposure. Rising OI does not reveal direction; every contract has a long and a short side.</li><li><b>Funding:</b> periodic payment that helps align perpetuals with the reference market. Check each exchange's rules.</li><li><b>Liquidations:</b> reported forced closures. Heatmaps are estimates, not verified maps.</li></ul>
+<div class="tw"><table><tr><th>Price</th><th>OI</th><th>Initial reading</th></tr><tr><td>Rising</td><td>Rising</td><td>More open exposure accompanies the rally</td></tr><tr><td>Rising</td><td>Falling</td><td>Positions closing during the rally</td></tr><tr><td>Falling</td><td>Rising</td><td>More open exposure accompanies the decline</td></tr><tr><td>Falling</td><td>Falling</td><td>Positions closing during the decline</td></tr></table></div>These are descriptions, not signals. Combine with structure, spot activity and funding.</div></details>
+<details><summary>3.5 Three scanner outputs</summary><div><b>Ready for chart review</b> (meets screening), <b>Watch for trigger</b> (interesting, no entry yet), <b>Reject</b> (liquidity, structure, target space or event risk). Explain why each qualifies and what would disqualify it.</div></details></section>
+
+<section id="tv"><h2>Part 4: TradingView laboratory</h2>
+<details open><summary>4.1 Workspace and indicators</summary><div><div class="tw"><table><tr><th>Timeframe</th><th>Purpose</th></tr><tr><td>Weekly</td><td>Long-term context, major levels</td></tr><tr><td>Daily</td><td>Dominant structure and zones</td></tr><tr><td>4H</td><td>Setup development, trading range</td></tr><tr><td>1H</td><td>Entry confirmation, planning</td></tr><tr><td>15M</td><td>Optional refinement</td></tr></table></div>
+Use Daily → 4H → 1H for the first month.
+<div class="tw"><table><tr><th>Indicator</th><th>Start</th><th>Purpose</th></tr><tr><td>EMA</td><td>20, 50</td><td>Trend context</td></tr><tr><td>RSI</td><td>14</td><td>Momentum</td></tr><tr><td>MACD</td><td>12, 26, 9</td><td>Momentum shifts</td></tr><tr><td>ATR</td><td>14</td><td>Volatility, stop distance</td></tr><tr><td>VWAP</td><td>Session</td><td>Intraday reference</td></tr><tr><td>Volume Profile</td><td>Fixed or visible range</td><td>Volume by price</td></tr></table></div>These are starting settings. Test them against a simple baseline.</div></details>
+<details><summary>4.2 Mark structure before indicators</summary><div>Identify swing highs and lows, label structure, mark support and resistance and the nearest opposing level. Repeat on 4H, then use 1H for entry. Vocabulary: HH, HL, LH, LL, BOS, CHoCH/MSS. These terms vary between methods, so write down your exact rule for confirming a swing and a break.</div></details>
+<details><summary>4.3 Volume Profile</summary><div>POC is the highest-volume price, VAH and VAL bound the value area, high-volume nodes show concentrated activity and low-volume nodes show thin activity. Example: BTC ranges $98,000 to $100,000 with POC $99,100, VAL $98,700, VAH $99,600, then breaks above $100,000. Do not buy immediately. Watch for a hold above the range, follow-through and a valid retest. Falling back into the old value area suggests failure. POC is not a guaranteed magnet.</div></details>
+<details><summary>4.4 VWAP and 4.5 Alerts</summary><div>Price above a rising session VWAP that pulls back, rejects and closes higher with bullish 1H structure may support a long if entry, stop and target rules are met. Repeated crossings of a flat VWAP suggest a rotational market where trend strategies struggle. Set alerts for swing highs and lows, pullback zones, closes beyond structure, invalidation and targets. An alert is a reminder to analyse, not an entry order.</div></details></section>
+
+<section id="flow"><h2>Part 5: Analysis and execution framework</h2>
+<details open><summary>The 10-stage workflow</summary><div><ol><li>Market regime</li><li>Asset discovery</li><li>Liquidity check</li><li>Catalyst check</li><li>Higher-timeframe analysis</li><li>Setup identification</li><li>Entry confirmation</li><li>Risk calculation</li><li>Execution and management</li><li>Journal and review</li></ol></div></details>
+<details><summary>5.1 and 5.2 Setup, entry, stop, target</summary><div>Pick one defined setup: breakout and retest, trend pullback, sweep then structure shift, range rejection or momentum continuation. If you cannot state the trigger exactly, it is not ready to test.
+<p>Example: entry $10.10, stop $9.80, target $10.80. Risk $0.30, reward $0.70, gross RR ≈ 2.33 before fees, funding and slippage. Put the stop where the thesis is invalid, never to manufacture a ratio.</p></div></details>
+<details><summary>5.3 Position size from risk</summary><div><code>Quantity = risk budget / entry-to-stop distance</code>. With $1,000 equity and 0.5% risk, the budget is $5; $5 / $0.30 ≈ 16.67 tokens, about $168 notional. Size comes before leverage. Reduce for fees, slippage and funding. Inverse contracts, FX, futures and synthetics need contract-specific formulas. Planned risk is not maximum loss: gaps, slippage and liquidation can cost more. Try the <a href="#lab">calculator</a>.</div></details>
+<details><summary>5.4 Manage after entry</summary><div>Decide beforehand: fixed or rule-adjusted stop, partial profits, fixed target or trail, exit on opposite signal, and effects of funding, swaps or expiry. Never widen a stop because a trade is losing or move a target out of attachment.</div></details></section>
+
+<section id="concepts"><h2>Part 6: Liquidity, order blocks, FVGs, candles</h2><p class="lead">These are vulnerable to hindsight. Keep definitions fixed during testing and compare against a baseline.</p>
+<details open><summary>6.1 Liquidity pools and sweeps</summary><div>Mark previous day and week highs and lows, equal highs and lows, major swings, range boundaries and session extremes. Bullish sweep hypothesis: price trades below a swing low, closes back above, breaks a local swing high, holds a retest, and has space to the next level. Reverse for bearish. Sweeps can fail; confirmation and risk control are essential.</div></details>
+<details><summary>6.2 Order blocks</summary><div>Testable bullish definition: the last bearish candle before a bullish displacement that closes above a predefined swing high. Specify the qualifying candle, swing confirmation, body or full range, invalidation and allowed retests. Do not assume it reveals institutional orders; test whether it improves a baseline.</div></details>
+<details><summary>6.3 Fair value gaps</summary><div>Bullish FVG: Candle 3 low &gt; Candle 1 high; the gap is that interval. Bearish: Candle 3 high &lt; Candle 1 low. If Candle 1 high is $100 and Candle 3 low is $101, the gap is $100 to $101. Not every FVG fills and not every fill reverses.</div></details>
+<details><summary>6.4 Candlestick patterns</summary><div>Patterns matter in context. A bullish engulfing candle at predefined support may qualify for review; mid-range chop has little value. Record pattern, location, timeframe, entry and outcome, and compare with a no-pattern baseline.</div></details></section>
+
+<section id="markets"><h2>Parts 7 to 10: The five markets</h2>
+<details open><summary>7. Crypto spot versus perpetuals</summary><div class="tw"><table><tr><th></th><th>Spot</th><th>Futures / perpetuals</th></tr><tr><td>Exposure</td><td>Own the asset</td><td>Derivative position</td></tr><tr><td>Shorting</td><td>Needs borrowing or margin</td><td>Generally available</td></tr><tr><td>Leverage</td><td>Product dependent</td><td>Common, adds liquidation risk</td></tr><tr><td>Funding</td><td>Usually none</td><td>Common on perpetuals</td></tr><tr><td>Costs</td><td>Fees, spread, slippage</td><td>Plus funding and margin costs</td></tr></table></div>Leverage sets required margin, not how much you may lose. If correct sizing gives $250 notional for a $5 risk, do not raise it to $1,000 because the exchange allows it.</details>
+<details><summary>8. Forex</summary><div>Use TradingView, an economic calendar, central-bank releases and your broker's spreads, swaps and pip values. For EUR/USD assess both currencies: ECB and Fed expectations, diverging rate paths, Daily trend, and imminent announcements. Example: Daily uptrend pulls back into a 4H support zone; on 1H price sweeps a local low, reclaims it, breaks a confirmed swing high and holds the retest, targeting the next 4H high. Before entry compute pip distance, pip value, size and costs, and check the spread and news. Do not apply crypto funding assumptions; swaps and rollover are the relevant costs.</div></details>
+<details><summary>9. Synthetic and volatility indices</summary><div>Test each instrument on its own. Check the provider, historical behaviour, contract and point value, minimum size, spread, order rules, availability and volatility on your timeframe. Volatility 75 and Volatility 75 (1s) are not interchangeable. Example bearish pullback: 4H downtrend, rally into resistance, lower high, 1H break of a local low, invalidation above the swing, size from the exact point value. It is a hypothesis to test. Use demo accounts while learning; fast candles are not a reason to raise risk.</div></details>
+<details><summary>10. Stock indices and futures</summary><div>Verify contract size, tick size and value, hours, initial and maintenance margin, expiry and rollover, and settlement. Example breakout: Daily or 4H context permits the direction, price breaks the prior range high, a predefined retest or continuation triggers entry, stop at invalidation, target adequate after costs, and no major scheduled event. Standard and micro contracts differ in tick value. Continuous charts may not match the tradable contract price.</div></details></section>
+
+<section id="quant"><h2>Parts 11 and 12: Prove your edge and run your day</h2>
+<details open><summary>11.1 Write the rules first</summary><div>Document market, timeframes, permitted regimes, exact entry, stop, target and exit, sizing method, maximum trade and daily risk, event filters, costs, and what invalidates the setup. Replace "enter when momentum is strong" with measurable conditions.</div></details>
+<details><summary>11.3 Metrics</summary><div><code>Expectancy = (Pw × W) − (Pl × L)</code> in consistent units such as R, net of costs. <code>Profit factor = gross profits / |gross losses|</code>. Max drawdown is the largest peak-to-trough fall. Also track win rate, trade count, longest losing streak, cost burden, and results by regime, instrument and direction. A 70% win rate can lose money; a 40% win rate can profit. The <a href="#journal">journal</a> computes these for you.</div></details>
+<details><summary>11.4 Test in sequence</summary><div><ol><li>Historical study with fixed definitions</li><li>Backtest with realistic costs</li><li>Out-of-sample test</li><li>Demo forward test</li><li>Small live trial, only with affordable capital</li></ol>Avoid changing several settings after each loss; that is overfitting.</div></details>
+<details><summary>12. Daily operating routine</summary><div><b>Before:</b> check the broad market and benchmark, screen candidates and liquidity, check news, releases and supply events, review derivatives, mark higher-timeframe levels, shortlist.<br><b>During:</b> wait for price to reach the area, recheck context, confirm entry, calculate risk and costs, reject if rules fail, execute and manage by plan.<br><b>After:</b> record every trade and qualifying miss, save screenshots, separate strategy losses from rule violations, update stats, review costs, choose one improvement to test.<br><b>Weekly:</b> Which setups paid after costs? Which regimes lost? Was the scanner early enough? Did costs bite? Did indicators help in testing? Did I follow the rules? What is the next single hypothesis?</div></details></section>
+
+<section id="bot"><h2>Part 13: Your AI analysis bot</h2><p class="lead">Start with analysis and alerts, not autonomous trading. Automate the repeatable parts and keep risk controls deterministic.</p>
+<div class="grid"><div class="card"><b>1. Data collection</b><br>CoinMarketCap, exchange candles, order books, derivatives, news</div><div class="card"><b>2. Analysis engine</b><br>Structure, relative strength, volume, volatility, regime</div><div class="card"><b>3. Setup and risk engine</b><br>Entries, invalidation, sizing, costs, limits</div><div class="card"><b>4. Reports and journal</b><br>Ranked candidates, plans, rejections, backtests</div></div>
+<details open><summary>Every report should contain</summary><div><ul><li>Instrument, exchange and data timestamp</li><li>Regime and higher-timeframe direction</li><li>Relative strength versus benchmark</li><li>Confirmed and unconfirmed levels</li><li>Setup status: absent, developing, confirmed, invalidated</li><li>Entry, stop, target, reward-to-risk</li><li>Estimated fees, funding, slippage</li><li>Position size for a given risk budget</li><li>Evidence for and reasons to reject</li><li>Data gaps, uncertainty and event warnings</li></ul>If a source is stale, say so. Never call an unclosed candle a confirmed close signal.</div></details>
+<details><summary>Role of AI and build order</summary><div>Use conventional code to calculate signals, enforce limits and validate data. Use AI to summarise context, explain evidence, compare candidates and write reports. AI must not override the risk engine, invent missing data or claim profitability without evidence.<ol><li>Data collector</li><li>Store and validate candles</li><li>Explicit-rule indicators and structure</li><li>Reports without orders</li><li>Backtest signals</li><li>Alerts and journal</li><li>Prospective evaluation</li><li>Execution only after controls are validated</li></ol></div></details></section>
+
+<section id="plan"><h2>Part 14: Your first 30 days</h2><p class="lead">Learn one full workflow before trying to master every market.</p>
+<div class="wk"><div class="card"><h3>Week 1: Foundation</h3>Structure, HH/HL/LH/LL, BOS, CHoCH, liquidity, support and resistance. Mark BTC and ETH charts; no live trades.</div><div class="card"><h3>Week 2: Research</h3>Build watchlists, compare relative strength, check liquidity and tokenomics, make a repeatable shortlist and review it on TradingView.</div><div class="card"><h3>Week 3: Execution</h3>Pick one setup (breakout-and-retest or trend pullback). Record entry, stop, target, risk and costs for every qualifying setup.</div><div class="card"><h3>Week 4: Validation</h3>Compute expectancy, profit factor and drawdown. Find workflow gaps and define version one of the bot.</div></div></section>
+
+<section id="lab"><h2>Calculators</h2><p class="lead">Figures are estimates. Check your exchange's contract rules, fees and funding.</p>
+<div class="card"><h3 style="margin-top:0">Position size and reward-to-risk</h3>
+<div class="grid" id="pc"></div><div class="out" id="po"></div></div>
+<div class="card"><h3 style="margin-top:0">Expectancy</h3>
+<div class="grid" id="ec"></div><div class="out" id="eo"></div></div></section>
+
+<section id="check"><h2>Part 15: Pre-trade checklist</h2>
+<div class="card chk"><b class="ui" id="cc">0 / 12 complete</b><div class="bar"><i id="cb"></i></div><div id="cl"></div>
+<button class="ghost" id="cr">Reset checklist</button> <button class="ghost" id="cp">Copy checklist</button>
+<p style="font-size:15px;color:var(--mute)">If a critical item cannot be verified, wait or skip. Completing the list documents the plan; it does not establish an edge.</p></div></section>
+
+<section id="journal"><h2>Trade journal</h2><p class="lead">Saved in this browser only. Enter results in R multiples, net of costs.</p>
+<div class="card"><div class="grid" id="jf"></div><p><button id="ja">Add trade</button> <button class="ghost" id="jx">Export CSV</button></p></div>
+<div class="out" id="js"></div>
+<div class="tw"><table id="jt"></table></div></section>
+
+<section id="final"><h2>Final principles</h2><ul><li>Discover with CoinMarketCap, then verify the market, token, liquidity and event risk.</li><li>Analyse with TradingView; add derivatives context where relevant.</li><li>Plan entry, invalidation, target, size and costs; follow the written rules.</li><li>Measure with the journal and backtests before trusting a strategy.</li><li>Automate only the rules that survive testing.</li></ul>
+<div class="note"><b>Your first task:</b> take one real crypto chart, run the whole research-to-execution workflow and write a trade report, even if the answer is no trade. This site is educational material, not financial advice.</div></section>
+
+<section id="basics"><h2>What trading is</h2><p class="lead">Start here if you have never placed a trade.</p>
+<details open><summary>The basic idea</summary><div>Trading means buying or selling something whose price moves, hoping to profit from the move. You go <b>long</b> (buy) to profit when price rises, or <b>short</b> (sell) to profit when it falls. Every trade has an entry, a stop-loss that limits your loss, and a target or exit.</div></details>
+<details><summary>The five markets you will meet</summary><div class="tw"><table><tr><th>Market</th><th>What you trade</th><th>Good to know</th></tr><tr><td>Crypto spot</td><td>Coins you actually own</td><td>Open 24/7. Simplest to start.</td></tr><tr><td>Crypto perpetuals</td><td>Contracts that track a coin</td><td>Leverage and funding fees add risk.</td></tr><tr><td>Forex</td><td>Currency pairs like EUR/USD</td><td>Moves with economic news and interest rates.</td></tr><tr><td>Synthetic indices</td><td>Broker-made simulated markets</td><td>Test each instrument on demo first.</td></tr><tr><td>Stock indices</td><td>US500, Nasdaq and similar</td><td>Session hours and scheduled news matter.</td></tr></table></div><b>Pick one market and stay with it.</b> Crypto spot or a major forex pair is the easiest to learn on.</details>
+<details><summary>Words you need first</summary><div><ul><li><b>Spread:</b> the small cost between buy and sell price.</li><li><b>Leverage:</b> borrowed exposure. It raises both gains and losses.</li><li><b>Stop-loss:</b> an exit order that caps your loss.</li><li><b>Lot or size:</b> how much you trade.</li></ul>Every term is in the <a href="#gloss">glossary</a>.</div></details>
+<div class="note"><b>Be realistic.</b> Most retail traders lose money, and skill takes months to build. Only ever risk money you can afford to lose. No course, signal or tool guarantees profit.</div></section>
+
+<section id="setup"><h2>Set up your account safely</h2><p class="lead">A small, safe setup you can finish in an afternoon.</p>
+<ol><li><b>Choose one market</b> for your first three months.</li><li><b>Create a free TradingView account</b> for charts.</li><li><b>Open a demo account</b> with a regulated broker, or use an exchange's practice mode. Check the regulator on the regulator's own website, not the broker's.</li><li><b>Secure everything:</b> unique passwords, two-factor authentication, and never share keys. If you use an API key, make it read-only or without withdrawal rights.</li><li><b>Open the journal</b> in this site and log your first demo trade.</li><li><b>Block out a fixed time</b> each day to study or trade.</li></ol>
+<div class="note"><b>Red flags:</b> guaranteed returns, paid signal groups, strangers who offer to manage your money, "send crypto to unlock profit", and brokers with no verifiable regulator.</div></section>
+
+<section id="chart101"><h2>Reading a chart</h2><p class="lead">What every candle, line and label on the screen means.</p>
+<svg viewBox="0 0 320 130" role="img" aria-label="A bullish candle and a bearish candle with open, close, high and low labelled" style="max-width:380px;width:100%"><g stroke="currentColor" stroke-width="2"><line x1="70" y1="10" x2="70" y2="120"/><rect x="50" y="35" width="40" height="60" fill="#2e7d5b"/><line x1="230" y1="10" x2="230" y2="120"/><rect x="210" y="30" width="40" height="55" fill="#c2362b"/></g><g font-size="12" font-family="Archivo,sans-serif" fill="currentColor"><text x="98" y="42">Close</text><text x="98" y="98">Open</text><text x="98" y="16">High</text><text x="98" y="124">Low</text><text x="258" y="36">Open</text><text x="258" y="90">Close</text><text x="30" y="75" text-anchor="end">Up</text><text x="190" y="62" text-anchor="end">Down</text></g></svg>
+<ul><li><b>Candle:</b> shows open, high, low and close for one time period. The thin lines are wicks.</li><li><b>Timeframe:</b> how long each candle lasts. A 4H chart has one candle per four hours.</li><li><b>Trend:</b> higher highs and higher lows is an uptrend; lower highs and lower lows is a downtrend.</li><li><b>Support and resistance:</b> price areas where it has repeatedly paused or turned.</li><li><b>Volume:</b> how much traded in the period.</li></ul>
+Next, the <a href="#tv">charting basics</a> module shows how to mark structure properly.</section>
+
+<section id="risk101"><h2>Risk comes before profit</h2><p class="lead">The rules that keep you in the game long enough to improve.</p>
+<ul><li>Risk a small, fixed share of your account per trade. Beginners: 0.25% to 1%.</li><li>Place the stop-loss first, then size the position from it.</li><li>Set a daily loss limit and stop for the day when you hit it.</li><li>Never add to a losing trade. Never move a stop further away.</li></ul>
+<h3>Why small losses matter</h3><div id="dd"></div>
+<div class="note">Deep losses are hard to recover from: a 50% loss needs a 100% gain just to get back to even.</div></section>
+
+<section id="mind"><h2>Psychology and rules</h2><p class="lead">Most blown accounts come from broken rules, not bad analysis.</p>
+<div class="tw"><table><tr><th>Mistake</th><th>Rule that prevents it</th></tr><tr><td>Revenge trading after a loss</td><td>Two losses in a row means stop for the day.</td></tr><tr><td>Overtrading</td><td>Set a maximum number of trades per day.</td></tr><tr><td>Fear of missing out</td><td>No chasing. Wait for the written trigger or skip.</td></tr><tr><td>Moving the stop</td><td>The stop is placed once and only tightened by a written rule.</td></tr><tr><td>Oversizing after a win</td><td>Position size comes from the formula every time.</td></tr></table></div>
+<ul><li>Write an if-then plan before the session: "If price does X, I do Y. If not, I do nothing."</li><li>Trading nothing is a valid result. Log the setups you skipped.</li><li>Review your journal weekly and change one thing at a time.</li></ul></section>
+
+<section id="funded"><h2>Get funded</h2><p class="lead">How funded-trader programs work, how to judge whether you are ready, and how to plan a challenge.</p>
+<details open><summary>What "funded" means</summary><div>A proprietary trading (prop) firm lets you trade its capital, often on a simulated account, after you pass an evaluation. You keep a share of the profits, commonly 70% to 90%. You pay an evaluation fee, usually non-refundable, and you must follow strict rules. Funded does not mean guaranteed income, and many people fail challenges.</div></details>
+<details><summary>How a typical challenge works</summary><div class="tw"><table><tr><th>Rule</th><th>Typical range</th></tr><tr><td>Phase 1 profit target</td><td>8% to 10%</td></tr><tr><td>Phase 2 profit target</td><td>About 5%</td></tr><tr><td>Max daily loss</td><td>3% to 5%</td></tr><tr><td>Max total loss</td><td>6% to 12%</td></tr><tr><td>Minimum trading days</td><td>Often 3 to 5</td></tr><tr><td>Restricted behaviour</td><td>News trading, martingale, copy trading, weekend holds, bots</td></tr></table></div>These ranges are illustrative. Rules differ by firm, so read each firm's current rules in full. Check whether the drawdown is <b>static</b> (from your starting balance) or <b>trailing</b> (from your highest equity), and whether it uses balance or equity.</details>
+<details><summary>How to choose a firm</summary><div><ul><li>Clear, written rules with no hidden conditions.</li><li>Evidence of payouts and realistic payout timelines.</li><li>Offers the instruments you actually trade.</li><li>Fair fees and a reset or retry policy you understand.</li><li>Independent reviews, not only the firm's own marketing or paid affiliates.</li></ul></div></details>
+<details><summary>A sensible passing plan</summary><div><ol><li>Pass the readiness gates below on demo first.</li><li>Run the planner to see your odds before you pay.</li><li>Risk 0.25% to 0.5% per trade, not the maximum the firm allows.</li><li>Use one setup and one or two trades per day.</li><li>Set your own daily stop at half the firm's daily limit.</li><li>Avoid major news. When the target and minimum days are done, stop and submit.</li></ol></div></details>
+<details><summary>After you are funded</summary><div>Keep the same risk that got you there. Withdraw on schedule, keep records for tax purposes, and scale only when the numbers support it. Treat each failed challenge as a cost of doing business and budget for it.</div></details>
+<h3>Readiness gates</h3><p class="lead">Calculated from the trades in your journal. These are suggested gates, not guarantees.</p><div class="card" id="ready"></div>
+<h3>Challenge planner</h3><p class="lead">Simulates 2,000 challenges with your numbers (up to 400 trades each). It ignores the daily limit and assumes steady results, so treat the odds as a rough guide.</p>
+<div class="card"><div class="grid" id="fc"></div><div class="out" id="fo"></div></div>
+<div class="note">This is education, not financial advice. Prop-firm offers change, so verify every rule and fee yourself before paying.</div></section>
+</main></div></div>
+<script>
+const $=s=>document.querySelector(s),st={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const f=(n,d=2)=>isFinite(n)?(+n).toLocaleString(undefined,{maximumFractionDigits:d}):'n/a';
+const fld=(id,l,v,t='number',x='')=>`<label>${l}<input id="${id}" type="${t}" value="${v}" ${x} step="any"></label>`;
+// theme
+$('#theme').onclick=()=>{const r=document.documentElement,d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);r.dataset.theme=d?'light':'dark';st.set('theme',r.dataset.theme)};
+const th=st.get('theme',null);if(th)document.documentElement.dataset.theme=th;
+// runner score
+const rf=['Relative strength','Volume expansion','Market structure','Liquidity','Trade space and risk'];
+$('#runner').innerHTML=rf.map((n,i)=>`<label>${n} (0 to 2)<select data-r="${i}"><option>0</option><option>1</option><option>2</option></select></label>`).join('');
+function runner(){const s=[...document.querySelectorAll('[data-r]')].map(e=>+e.value),t=s.reduce((a,b)=>a+b,0),liq=s[3]===0||s[4]===0;
+$('#rs').textContent=t+' / 10';const v=$('#rv');v.textContent=liq?'Reject: liquidity or risk':t>=7?'Manual chart review':t>=4?'Watch for trigger':'Reject';v.className=liq?'neg':t>=7?'pos':''}
+document.querySelectorAll('[data-r]').forEach(e=>e.onchange=runner);runner();
+// position calc
+$('#pc').innerHTML=fld('eq','Account equity ($)',1000)+fld('rk','Risk per trade (%)',0.5)+fld('en','Entry',10.10)+fld('sl','Stop-loss',9.80)+fld('tp','Take-profit',10.80)+fld('fe','Fee per side (%)',0.06)+fld('lv','Leverage (margin only)',1);
+function pos(){const g=id=>+$('#'+id).value,eq=g('eq'),rb=eq*g('rk')/100,d=Math.abs(g('en')-g('sl')),q=d?rb/d:0,n=q*g('en'),rw=Math.abs(g('tp')-g('en')),rr=d?rw/d:0,fees=n*g('fe')/100*2,mg=n/(g('lv')||1);
+const ok=(g('en')>g('sl'))===(g('tp')>g('en'));
+$('#po').innerHTML=`<div>Risk budget<strong>$${f(rb)}</strong></div><div>Quantity<strong>${f(q,4)}</strong></div><div>Notional<strong>$${f(n)}</strong></div><div>Margin needed<strong>$${f(mg)}</strong></div><div>Gross RR<strong>${f(rr)} : 1</strong></div><div>Round-trip fees<strong>$${f(fees)}</strong></div><div>Net RR (after fees)<strong>${f(rb?(rw*q-fees)/(rb+fees):0)} : 1</strong></div>${ok?'':'<div>Check<strong class="neg">Stop and target on same side</strong></div>'}${mg>eq?'<div>Warning<strong class="neg">Margin exceeds equity</strong></div>':''}`}
+document.querySelectorAll('#pc input').forEach(e=>e.oninput=pos);pos();
+// expectancy
+$('#ec').innerHTML=fld('wr','Win rate (%)',40)+fld('aw','Average win (R)',2.5)+fld('al','Average loss (R)',1);
+function ex(){const w=+$('#wr').value/100,e=w*$('#aw').value-(1-w)*$('#al').value,be=100*$('#al').value/(+$('#aw').value+ +$('#al').value);
+$('#eo').innerHTML=`<div>Expectancy<strong class="${e>=0?'pos':'neg'}">${f(e)} R / trade</strong></div><div>Break-even win rate<strong>${f(be,1)}%</strong></div><div>Per 100 trades<strong>${f(e*100,1)} R</strong></div>`}
+document.querySelectorAll('#ec input').forEach(e=>e.oninput=ex);ex();
+// checklist
+const items=['I know which market regime I am trading.','I checked the relevant benchmark and correlated markets.','I researched the candidate rather than chasing a percentage gain.','I verified the actual trading pair, liquidity and spread.','I checked relevant token supply, news or event risks.','I marked higher-timeframe structure and key levels.','I have a written and confirmed entry condition.','I know exactly what invalidates the setup.','I calculated position size from my risk budget.','I accounted for fees, funding, leverage and contract rules.','I have an exit and trade-management plan.','I will record the outcome and evaluate it across a sample.'];
+let ck=st.get('ck',[]);
+function drawC(){$('#cl').innerHTML=items.map((t,i)=>`<label><input type="checkbox" data-c="${i}" ${ck.includes(i)?'checked':''}>${t}</label>`).join('');
+document.querySelectorAll('[data-c]').forEach(e=>e.onchange=()=>{ck=e.checked?[...ck,+e.dataset.c]:ck.filter(x=>x!==+e.dataset.c);st.set('ck',ck);upC()});upC()}
+function upC(){$('#cc').textContent=ck.length+' / 12 complete'+(ck.length===12?' · ready to evaluate':'');$('#cb').style.width=ck.length/12*100+'%'}
+$('#cr').onclick=()=>{ck=[];st.set('ck',ck);drawC()};
+$('#cp').onclick=async()=>{const t=items.map((x,i)=>(ck.includes(i)?'[x] ':'[ ] ')+x).join('\n');try{await navigator.clipboard.writeText(t);$('#cp').textContent='Copied'}catch(e){$('#cp').textContent='Copy blocked'}setTimeout(()=>$('#cp').textContent='Copy checklist',1500)};
+drawC();
+// journal
+$('#jf').innerHTML=fld('jd','Date',new Date().toISOString().slice(0,10),'date')+fld('ji','Instrument / venue','','text','placeholder="BTCUSDT Binance"')+fld('js_','Setup','','text','placeholder="Breakout retest"')+`<label>Direction<select id="jr"><option>Long</option><option>Short</option></select></label>`+fld('jn','Result (net R)',1.5)+fld('jo','Notes','','text');
+let jr=st.get('jr',[]);
+function drawJ(){const T=$('#jt');T.innerHTML='<tr><th>Date</th><th>Instrument</th><th>Setup</th><th>Dir</th><th>R</th><th>Notes</th><th></th></tr>'+(jr.length?jr.map((t,i)=>`<tr><td>${t.d}</td><td>${esc(t.i)}</td><td>${esc(t.s)}</td><td>${t.r}</td><td class="${t.n>=0?'pos':'neg'}">${t.n}</td><td>${esc(t.o)}</td><td><button class="ghost" data-x="${i}" aria-label="Delete trade">×</button></td></tr>`).join(''):'<tr><td colspan="7">No trades yet. Add a trade, or a qualifying setup you skipped, with 0 R.</td></tr>');
+document.querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{jr.splice(+b.dataset.x,1);st.set('jr',jr);drawJ()});
+const R=jr.map(t=>t.n),w=R.filter(x=>x>0),l=R.filter(x=>x<0),sum=a=>a.reduce((x,y)=>x+y,0);let c=0,pk=0,dd=0;R.forEach(x=>{c+=x;pk=Math.max(pk,c);dd=Math.max(dd,pk-c)});
+const ex=R.length?sum(R)/R.length:0,pf=l.length?sum(w)/Math.abs(sum(l)):(w.length?Infinity:0);
+$('#js').innerHTML=`<div>Trades<strong>${R.length}</strong></div><div>Win rate<strong>${R.length?f(w.length/R.length*100,1):0}%</strong></div><div>Expectancy<strong class="${ex>=0?'pos':'neg'}">${f(ex)} R</strong></div><div>Profit factor<strong>${pf===Infinity?'∞':f(pf)}</strong></div><div>Total<strong class="${sum(R)>=0?'pos':'neg'}">${f(sum(R))} R</strong></div><div>Max drawdown<strong>${f(dd)} R</strong></div>`}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('#ja').onclick=()=>{const n=parseFloat($('#jn').value);if(isNaN(n)){$('#jn').focus();return}jr.push({d:$('#jd').value,i:$('#ji').value,s:$('#js_').value,r:$('#jr').value,n,o:$('#jo').value});st.set('jr',jr);$('#jo').value='';drawJ()};
+$('#jx').onclick=()=>{const q=v=>'"'+String(v).replace(/"/g,'""')+'"',c=['date,instrument,setup,direction,net_r,notes',...jr.map(t=>[t.d,t.i,t.s,t.r,t.n,t.o].map(q).join(','))].join('\n');const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(c);a.download='trade-journal.csv';a.click()};
+drawJ();
+</script>
+<script>
+const M={home:['Start here'],plan:['30-day roadmap','Beginner',3,'Know what to do in each week.'],gloss:['Glossary'],basics:['What trading is','Beginner',6,'Understand how trading works and what to expect.'],setup:['Set up safely','Beginner',5,'Open a demo account and secure your setup.'],chart101:['Reading a chart','Beginner',6,'Read candles, trends, support and resistance.'],risk101:['Risk before profit','Beginner',5,'Know the risk rules that keep you in the game.'],stack:['Your tool stack','Beginner',5,'Know which tool answers which question.'],tv:['Charting basics','Beginner',10,'Mark structure and levels before using any indicator.'],flow:['The trade workflow','Beginner',8,'Follow ten steps and size a trade from your risk budget.'],cmc:['Researching coins','Beginner',12,'Turn a long coin list into a short, verified shortlist.'],scan:['Market scanner','Intermediate',10,'Score candidates and read derivatives data with care.'],lab:['Calculators','Beginner',5,'Size a trade and see whether a win rate can pay.'],check:['Pre-trade checklist','Beginner',3,'Run the 12 checks before every trade.'],journal:['Trade journal','Beginner',5,'Record trades and measure your real results.'],mind:['Psychology and rules','Beginner',5,'Prevent the mistakes that blow up accounts.'],concepts:['Liquidity, blocks and gaps','Intermediate',8,'Define advanced patterns so they can be tested.'],markets:['The five markets','Intermediate',10,'Adapt the same process to spot, perpetuals, forex, synthetics and indices.'],quant:['Prove your edge','Intermediate',8,'Backtest and review with real metrics.'],bot:['AI analysis bot','Advanced',8,'Plan a bot that analyses and alerts, not one that trades.'],funded:['Get funded','Intermediate',12,'Judge your readiness and plan a funded-trader challenge.'],final:['Final principles','Beginner',2,'']};
+const GR=[['Start',['home','plan','gloss'],''],['Basics',['basics','setup','chart101','risk101'],'You understand how trading works, have a safe demo setup and know the risk rules.'],['Foundations',['stack','tv','flow'],'You can read structure and plan a trade from entry to exit.'],['Research',['cmc','scan'],'You can build a shortlist of liquid, verified markets.'],['Practice',['lab','check','journal','mind'],'You trade on demo with a checklist and measure your real results.'],['Setups and markets',['concepts','markets'],'You can define a setup and adapt it to the market you chose.'],['Prove and automate',['quant','bot'],'You test your edge with data before paying for any challenge.'],['Get funded',['funded','final'],'You pass the readiness gates, plan a challenge and manage a funded account.']];
+const COL=['#1f5fbf','#2a8f9d','#2e7d5b','#8a6d1f','#8e4fb0','#c2362b','#14202b'];
+const ORDER=GR.flatMap(g=>g[1]),TRACK=ORDER.filter(i=>!['home','plan','gloss'].includes(i));
+let done=st.get('done',[]),cur='home';
+const secs=[...document.querySelectorAll('main>section')],hero=document.querySelector('.hero');
+secs.forEach(s=>{const m=M[s.id];if(!m||!m[1])return;s.insertAdjacentHTML('afterbegin',`<div class="meta"><span class="chip ${m[1]}">${m[1]}</span><span>About ${m[2]} min</span></div>`);
+if(m[3]){s.querySelector('h2').insertAdjacentHTML('afterend',`<div class="goal"><b>What you'll learn:</b> ${m[3]}</div>`)}
+if(TRACK.includes(s.id)){const i=ORDER.indexOf(s.id),n=ORDER[i+1];s.insertAdjacentHTML('beforeend',`<div class="foot"><button class="ghost" data-go="${ORDER[i-1]==='gloss'?'home':ORDER[i-1]}">Previous</button><button data-fin="${s.id}">${n?'Complete and continue':'Complete course'}</button></div>`)}});
+function side(){$('#side').innerHTML=GR.map((g,k)=>{const tr=g[1].filter(i=>TRACK.includes(i)),n=tr.filter(i=>done.includes(i)).length;return `<h4>${k?k+'. ':''}${g[0]}${tr.length?` <span>${n}/${tr.length}</span>`:''}</h4>`+g[1].map(i=>`<button data-go="${i}" class="${i===cur?'on':''}">${TRACK.includes(i)?`<span class="ck ${done.includes(i)?'d':''}">${done.includes(i)?'✓':''}</span>`:'<span class="ck" style="border:0"></span>'}${M[i][0]}</button>`).join('')}).join('');
+$('#tp').textContent=done.filter(x=>TRACK.includes(x)).length+' of '+TRACK.length+' done'}
+function jmap(){$('#jmap').innerHTML=GR.slice(1).map((g,k)=>{const n=g[1].filter(i=>done.includes(i)).length;return `<div class="lv" style="--c:${COL[k]}"><div class="dot">${k+1}</div><div class="card"><b class="ui">${g[0]}</b> <span class="small" style="margin:0 0 0 8px">${n} of ${g[1].length} done</span><p style="margin:4px 0 8px">${g[2]}</p><div class="tabs">${g[1].map(i=>`<button class="ghost" data-go="${i}">${done.includes(i)?'✓ ':''}${M[i][0]}</button>`).join('')}</div></div></div>`}).join('')}
+function prog(){const n=done.filter(x=>TRACK.includes(x)).length,nx=TRACK.find(x=>!done.includes(x));
+$('#prog').innerHTML=`<b class="ui">Your progress: ${n} of ${TRACK.length} modules</b><div class="bar"><i style="width:${n/TRACK.length*100}%"></i></div>`+(nx?`<button data-go="${nx}">${n?'Continue':'Start'}: ${M[nx][0]}</button>`:'<b class="pos">Course complete. Now run your first real workflow and journal it.</b>');jmap()}
+function ready(){const R=jr.map(t=>t.n),w=R.filter(x=>x>0),l=R.filter(x=>x<0),s=a=>a.reduce((x,y)=>x+y,0);let c=0,pk=0,dd=0;R.forEach(x=>{c+=x;pk=Math.max(pk,c);dd=Math.max(dd,pk-c)});
+const e=R.length?s(R)/R.length:0,pf=l.length?s(w)/Math.abs(s(l)):(w.length?9:0);
+const G=[['At least 100 journaled trades',R.length>=100,R.length+' logged'],['Expectancy above 0.1 R per trade',e>0.1,f(e)+' R'],['Profit factor of 1.3 or more',pf>=1.3,f(pf)],['Max drawdown under 8 R',R.length>0&&dd<8,f(dd)+' R']];
+$('#ready').innerHTML=G.map(x=>`<div class="gt"><b class="${x[1]?'pos':'neg'}">${x[1]?'Pass':'Not yet'}</b> ${x[0]} <span class="small" style="margin:0">(${x[2]})</span></div>`).join('')+`<p style="margin-bottom:0">${G.every(x=>x[1])?'You meet all four gates. Use the planner below.':'Keep practicing on demo until every gate passes. Add trades in the journal module.'}</p>`}
+$('#fc').innerHTML=fld('fa','Account size ($)',100000)+fld('ft','Profit target (%)',8)+fld('fm','Max total loss (%)',10)+fld('fd','Max daily loss (%)',5)+fld('fr','Risk per trade (%)',0.5)+fld('fw','Win rate (%)',45)+fld('fx','Average win (R)',2)+'<label>Drawdown type<select id="fy"><option value="s">Static (from start)</option><option value="t">Trailing (from peak)</option></select></label>';
+function plan(){const g=id=>+$('#'+id).value,r=g('fr'),w=g('fw')/100,aw=g('fx'),e=w*aw-(1-w),need=r?g('ft')/r:0,nl=r?Math.floor(g('fm')/r):0,dl=r?Math.floor(g('fd')/r):0,tg=g('ft'),mx=g('fm'),tr=$('#fy').value==='t';
+let p=0,fl=0,un=0;if(r>0)for(let i=0;i<2000;i++){let q=0,pk=0,k=0,res=0;while(k<400){k++;q+=Math.random()<w?r*aw:-r;if(q>pk)pk=q;if(q>=tg){res=1;break}if((tr?pk-q:-q)>=mx-1e-9){res=2;break}}if(res===1)p++;else if(res===2)fl++;else un++}
+$('#fo').innerHTML=`<div>Risk per trade<strong>$${f(g('fa')*r/100)}</strong></div><div>Expectancy<strong class="${e>0?'pos':'neg'}">${f(e)} R</strong></div><div>R needed for target<strong>${f(need,1)} R</strong></div><div>Trades to target<strong>${e>0?'about '+f(need/e,0):'never at these numbers'}</strong></div><div>Losses in a row: daily limit<strong>${dl}</strong></div><div>Losses in a row: total limit<strong>${nl}</strong></div><div>Chance of that daily streak<strong>${f(Math.pow(1-w,dl)*100,1)}%</strong></div><div>Simulated pass<strong class="pos">${f(p/20,1)}%</strong></div><div>Simulated fail<strong class="neg">${f(fl/20,1)}%</strong></div><div>Unfinished<strong>${f(un/20,1)}%</strong></div>`}
+document.querySelectorAll('#fc input,#fc select').forEach(e=>e.oninput=plan);
+(function(){const a=[5,10,20,30,50].map(L=>`<tr><td>${L}% loss</td><td>${f((1/(1-L/100)-1)*100,1)}% gain</td></tr>`).join(''),b=[0.5,1,2,5].map(r=>`<tr><td>${r}% per trade</td><td>${f((1-Math.pow(1-r/100,10))*100,1)}% down</td></tr>`).join('');$('#dd').innerHTML=`<div class="grid2"><div class="tw"><table><tr><th>If you lose</th><th>You need</th></tr>${a}</table></div><div class="tw"><table><tr><th>Risk size</th><th>After 10 losses in a row</th></tr>${b}</table></div></div>`})();
+function show(id){if(!M[id]||id==='home')id='home';cur=id;hero.style.display=id==='home'?'':'none';
+secs.forEach(s=>s.style.display=(s.id===id||(id==='home'&&s.id==='start'))?'':'none');
+side();prog();if(id==='funded'){ready();plan()}$('#side').classList.remove('open');window.scrollTo(0,0);document.title=(id==='home'?'':M[id][0]+' | ')+'Trading Masterclass'}
+addEventListener('hashchange',()=>show(location.hash.slice(1)));
+document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){location.hash=b.dataset.go;return}
+const d=e.target.closest('[data-fin]');if(d){const i=d.dataset.fin;if(!done.includes(i))done.push(i);st.set('done',done);const n=ORDER[ORDER.indexOf(i)+1];location.hash=n||'home';if(!n)show('home')}});
+$('#menu').onclick=()=>$('#side').classList.toggle('open');
+// glossary
+const T=[['Backtest','Testing a strategy on past data to see how its rules would have performed.'],['ATR','Average True Range: the typical size of recent price swings. Helps set stop distance.'],['BOS','Break of structure: price breaks a prior swing high or low, by your written definition.'],['CHoCH / MSS','A shift in short-term structure that hints the direction may be changing.'],['Drawdown','The fall from an equity peak to a later low.'],['EMA','Exponential moving average: a trend line that weights recent prices more.'],['Expectancy','Average result per trade, in R, after costs.'],['FDV','Fully diluted valuation: price times the fully diluted supply estimate.'],['Fair value gap','A three-candle price gap that price may later revisit.'],['Funding rate','A periodic payment between longs and shorts on perpetual futures.'],['Leverage','Borrowed exposure. It sets margin needed, not how much you should risk.'],['Liquidation','Forced closing of a leveraged position when margin runs out.'],['Liquidity','How easily you can trade without moving the price.'],['Market cap','Price times circulating supply.'],['Open interest','Total outstanding derivatives contracts.'],['Order block','A candle zone before a strong move, defined by your own testable rule.'],['Perpetual','A futures contract with no expiry, kept near spot price by funding.'],['Pip','The standard smallest quoted price move in most forex pairs.'],['POC','Point of control: the price with the most traded volume in a profile.'],['Profit factor','Gross profits divided by gross losses.'],['R multiple','Profit or loss measured in units of your planned risk. A 2R win earns twice what you risked.'],['Relative strength','How an asset performs compared with a benchmark such as BTC.'],['RSI','Relative Strength Index: a 0 to 100 momentum gauge, usually 14 periods.'],['Slippage','The gap between the price you expected and the price you got.'],['Spread','The difference between the best bid and best ask.'],['Stop-loss','A preset exit that limits loss when your setup is invalid.'],['Swing high / low','A local peak or trough that stands out from nearby candles.'],['VWAP','Volume-weighted average price for the session.']];
+function gl(){const q=$('#gs').value.toLowerCase();$('#gl').innerHTML=T.filter(t=>(t[0]+t[1]).toLowerCase().includes(q)).map(t=>`<div class="gt"><b>${t[0]}</b><br>${t[1]}</div>`).join('')||'<p>No matching term.</p>'}
+$('#gs').oninput=gl;gl();
+show(location.hash.slice(1));
+</script></body></html>
